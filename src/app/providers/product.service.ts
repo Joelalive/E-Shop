@@ -18,12 +18,19 @@ export class ProductService {
       .get(url);
   }
 
+  getProducts(catID: string):Observable<any>{
+    let url = 'http://localhost:8000/api/category/'+catID+'/products';
+    return this
+    .http
+    .get(url);
+  }
+
   
 }
 
 export interface ProductInterface {
   name: string;
-  href: string;
+  price: string;
 }
 
 export interface CategoryInterface {

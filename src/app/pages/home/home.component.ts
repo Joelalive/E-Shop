@@ -1,4 +1,5 @@
-import { ProductService, ProductInterface } from './../../providers/product.service';
+import { CategoryInterface } from 'src/app/providers/product.service';
+import { ProductService } from './../../providers/product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public price: string;
-  public products: Array<ProductInterface> = [];
+  public category: Array<CategoryInterface> = [];
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
